@@ -8,6 +8,68 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <main>
+      <!-- Header Section -->
+      <header>
+        <div class="logo"><p>Awesome Books</p></div>
+        <div class="navbar">
+          <div class="links"><a href="#list" id="list-link">List</a></div>
+          <div class="links"><a href="#add" id="add-link">Add new</a></div>
+          <div class="links">
+            <a href="#contact" id="contact-link">Contact</a>
+          </div>
+        </div>
+      </header>
+      <div class="time"></div>
+      <!-- List Section -->
+      <div id="list" class="book">
+        <h1>Awesome Books</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+      </div>
+      <div id="add" class="add-new">
+        <h2>Add new book</h2>
+        <form id="book-form">
+          <input
+            type="text"
+            id="title"
+            class="text-inpute"
+            placeholder="Title"
+          />
+          <input
+            type="text"
+            id="author"
+            class="text-inpute"
+            placeholder="Author"
+          />
+          <button type="submit" id="button">Add</button>
+        </form>
+      </div>
+      <!-- Contact Section -->
+      <div id="contact" class="contact-us">
+        <h2>Contact Information</h2>
+        <p>
+          Do have any question or you just want to say "hello" <br />
+          You can Reach out to us!
+        </p>
+        <ul>
+          <li>Our E-mail: books@awesome.com</li>
+          <li>Our Phone Number: 003311223344</li>
+          <li>Our Adress: John Doe street, 22, 883322 Vikings, Valhala</li>
+        </ul>
+      </div>
+      <!-- Footer Section -->
+      <footer><p>Copyright: All rights reserved</p></footer>
+    </main>
     <script type="module" src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
   </body>
 </html>

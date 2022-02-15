@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/***  NavBar Section  ***/
+header {
+  display: flex;
+  padding: 5px 60px;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: solid 3px black;
+}
+
+.navbar {
+  display: flex;
+  column-gap: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 800;
+  color: black;
+}
+
+.time {
+  position: absolute;
+  z-index: 88;
+  right: 5%;
+  font-size: smaller;
+}
+
+/***  list Section  ***/
+.book {
+  position: absolute;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 90px);
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+
+.book h1 {
+  padding-top: 40px;
+}
+
+table {
+  border: solid 2px black;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+table tr {
+  display: grid;
+  grid-template-columns: 200px 200px 100px;
+  justify-items: left;
+  padding: 2px 20px 3px 10px;
+  border-bottom: solid 2px rgb(37 37 37);
+}
+
+table tbody tr {
+  border-bottom: none;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.411);
+}
+
+.delete {
+  cursor: pointer;
+  box-shadow: 3px 2px 3px rgb(31, 29, 29);
+}
+
+/*** Add new Section ***/
+.add-new {
+  position: absolute;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 90px);
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+}
+
+.add-new h2 {
+  padding-top: 40px;
+}
+
+form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+input,
+button {
+  border: solid 2px black;
+}
+
+form button {
+  align-self: flex-end;
+  width: 40px;
+  cursor: pointer;
+}
+
+/***  Contact Section  ***/
+.contact-us {
+  position: absolute;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 90px);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-us h2 {
+  padding: 40px 0;
+}
+
+.contact-us p {
+  padding-bottom: 20px;
+}
+
+.contact-us ul {
+  padding-left: 60px;
+}
+
+/***  Footer Section  ***/
+footer {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  text-align: left;
+  height: 40px;
+  font-weight: 800;
+  border-top: solid 2px black;
+  padding-top: 5px;
+  padding-left: 60px;
+}
