@@ -1,7 +1,8 @@
 import navSection from './modules/navbar.js';
 import startTime from './modules/startTime.js';
-import { UI, addBook, removeBook } from './modules/bookList.js';
+import UI from './modules/bookList.js';
 import Book from './modules/bookClass.js';
+import Library from './modules/library.js';
 
 startTime();
 
@@ -32,7 +33,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   }
   UI.addBookToList(book);
   UI.clearFields();
-  addBook(book);
+  Library.addBook(book);
   return true;
 });
 
@@ -40,5 +41,5 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
-  removeBook(e.target.parentElement.previousElementSibling.textContent);
+  Library.removeBook(e.target.parentElement.previousElementSibling.textContent);
 });

@@ -1,37 +1,37 @@
-// Book Class: Represents a Book
+// // Book Class: Represents a Book
 
-function getBooks() {
-  let books;
-  if (localStorage.getItem('books') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('books'));
-  }
+// getBooks(() => {
+//   let books;
+//   if (localStorage.getItem("books") === null) {
+//     books = [];
+//   } else {
+//     books = JSON.parse(localStorage.getItem("books"));
+//   }
 
-  return books;
-}
+//   return books;
+// });
 
-export function addBook(book) {
-  const books = getBooks();
-  books.push(book);
-  localStorage.setItem('books', JSON.stringify(books));
-}
-export function removeBook(author) {
-  const books = getBooks();
+// export default addBook((book) => {
+//   const books = getBooks();
+//   books.push(book);
+//   localStorage.setItem("books", JSON.stringify(books));
+// });
+// export default removeBook((author) => {
+//   const books = getBooks();
 
-  books.forEach((book, index) => {
-    if (book.author === author) {
-      books.splice(index, 1);
-    }
-  });
+//   books.forEach((book, index) => {
+//     if (book.author === author) {
+//       books.splice(index, 1);
+//     }
+//   });
 
-  localStorage.setItem('books', JSON.stringify(books));
-}
-
+//   localStorage.setItem("books", JSON.stringify(books));
+// });
+import Library from './library.js';
 // UI Class: Handle UI tasks
-export class UI {
+export default class UI {
   static displayBooks() {
-    const books = getBooks();
+    const books = Library.getBooks();
     books.forEach((book) => UI.addBookToList(book));
   }
 
