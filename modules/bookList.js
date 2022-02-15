@@ -1,5 +1,3 @@
-// // Book Class: Represents a Book
-
 import Library from './library.js';
 // UI Class: Handle UI tasks
 export default class UI {
