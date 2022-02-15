@@ -1,32 +1,5 @@
 // // Book Class: Represents a Book
 
-// getBooks(() => {
-//   let books;
-//   if (localStorage.getItem("books") === null) {
-//     books = [];
-//   } else {
-//     books = JSON.parse(localStorage.getItem("books"));
-//   }
-
-//   return books;
-// });
-
-// export default addBook((book) => {
-//   const books = getBooks();
-//   books.push(book);
-//   localStorage.setItem("books", JSON.stringify(books));
-// });
-// export default removeBook((author) => {
-//   const books = getBooks();
-
-//   books.forEach((book, index) => {
-//     if (book.author === author) {
-//       books.splice(index, 1);
-//     }
-//   });
-
-//   localStorage.setItem("books", JSON.stringify(books));
-// });
 import Library from './library.js';
 // UI Class: Handle UI tasks
 export default class UI {
